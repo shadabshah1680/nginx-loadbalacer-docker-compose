@@ -19,14 +19,14 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
   scheduled:
     triggers:
       - schedule:
-          cron: "0 12 * * 1"
+          cron: "* * * * *"
           filters:
             branches:
               only:
-                - master
+                - main
     jobs:
       - build
